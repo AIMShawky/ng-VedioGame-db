@@ -26,4 +26,15 @@ describe('GameDetailsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  it('should have gameDetails defined after ngOnInit', () => {
+    component.ngOnInit();
+    expect(component.gameDetails).toBeDefined();
+  });
+  
+  it('should call httpService.getGameDetails on ngOnInit', () => {
+    spyOn(component.httpService, 'getGameDetails');
+    component.ngOnInit();
+    expect(component.httpService.getGameDetails).toHaveBeenCalled();
+  });
 });
