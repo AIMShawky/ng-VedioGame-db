@@ -49,3 +49,10 @@ interface Trailer {
         max: string;
     };
 }
+
+export interface GameDetails {
+    background_image: string;
+    name: string;
+    description: string;
+    parent_platforms: Array<ParentPlatform>;
+}
