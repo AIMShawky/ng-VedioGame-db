@@ -1,0 +1,10 @@
+<div *ngIf="gameDetails">
+  <img [src]="gameDetails?.background_image" alt="{{ gameDetails?.name }}">
+  <h1>{{ gameDetails?.name }}</h1>
+  <p>{{ gameDetails?.description }}</p>
+  <ul>
+    <li *ngFor="let platform of gameDetails?.parent_platforms">
+      {{ platform?.platform?.name }}
+    </li>
+  </ul>
+</d

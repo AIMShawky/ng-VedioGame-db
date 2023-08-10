@@ -26,7 +26,7 @@ interface Genre {
 
 interface ParentPlatform {
     platform: {
-        name: string;
+        name?: string;
     };
 }
 
@@ -48,4 +48,11 @@ interface Trailer {
     data: {
         max: string;
     };
+}
+
+export interface GameDetails {
+    background_image: string;
+    name: string;
+    description: string;
+    parent_platforms: Array<ParentPlatform>;
 }
